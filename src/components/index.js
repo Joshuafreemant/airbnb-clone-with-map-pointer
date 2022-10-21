@@ -3,11 +3,11 @@ import Footer from './Footer'
 import Listings from './Listings'
 import ListingCard from './ListingCard'
 import NoResult from './NoResult'
-import Map from './Map.tsx'
-import MapPoint from './MapPoint.tsx'
-import OverlayContainer from './OverlayContainer.tsx'
-import ApartmentCard from './ApartmentCard.tsx'
-import ApartmentPoint from './ApartmentPoint.tsx'
+import Map from './Map.jsx'
+import MapPoint from './MapPoint.jsx'
+import OverlayContainer from './OverlayContainer.jsx'
+import ApartmentCard from './ApartmentCard.jsx'
+import ApartmentPoint from './ApartmentPoint.jsx'
 
 
 export {

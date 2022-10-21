@@ -11,46 +11,43 @@ function createOverlayElement() {
 }
 
 // Our OverlayComponent will recieve map, postion and children props - position is coords, map is google.map object and children is a component that will be render in overlay
-export type Props = {
-  map: google.maps.Map | null
-  position: { lat: number, lng: number }
-  children?: React.ReactChild
-}
+const OverlayContainer = props => {
 
-const OverlayContainer = (props: Props) => {
-  const overlay = React.useRef<google.maps.OverlayView | null>(null)
-  const el = React.useRef<Element | null>(null)
+    const google = window.google;
+
+  const overlay = React.useRef(null)
+  const el = React.useRef(null)
 
   // modified OverlayView from google.maps [https://developers.google.com/maps/documentation/javascript/reference/3.44/overlay-view?hl=en]
   class OverlayView extends window.google.maps.OverlayView {
-    position: google.maps.LatLng | null = null;
-    content: any = null;
+    position = null
+    content = null
 
-    constructor(props: any) {
-      super();
-      props.position && (this.position = props.position);
-      props.content && (this.content = props.content);
+    constructor(props) {
+      super()
+      props.position && (this.position = props.position)
+      props.content && (this.content = props.content)
     }
 
     onAdd = () => {
-      if (this.content) this.getPanes().floatPane.appendChild(this.content);
-    };
+      if (this.content) this.getPanes().floatPane.appendChild(this.content)
+    }
 
     onRemove = () => {
       if (this.content?.parentElement) {
-        this.content.parentElement.removeChild(this.content);
+        this.content.parentElement.removeChild(this.content)
       }
-    };
+    }
 
     draw = () => {
       if (this.position) {
         const divPosition = this.getProjection().fromLatLngToDivPixel(
           this.position
-        );
-        this.content.style.left = divPosition.x + 'px';
-        this.content.style.top = divPosition.y + 'px';
+        )
+        this.content.style.left = divPosition.x + "px"
+        this.content.style.top = divPosition.y + "px"
       }
-    };
+    }
   }
 
   React.useEffect(() => {
@@ -61,14 +58,17 @@ const OverlayContainer = (props: Props) => {
 
   if (props.map) {
     el.current = el.current || createOverlayElement()
-    overlay.current = overlay.current || new OverlayView(
-      {
-        position: new google.maps.LatLng(props.position.lat, props.position.lng),
+    overlay.current =
+      overlay.current ||
+      new OverlayView({
+        position: new google.maps.LatLng(
+          props.position.lat,
+          props.position.lng
+        ),
         content: el.current
-      }
-    )
+      })
     overlay.current.setMap(props.map)
-    return ReactDOM.createPortal(props.children, el.current);
+    return ReactDOM.createPortal(props.children, el.current)
   }
   return null
 }
