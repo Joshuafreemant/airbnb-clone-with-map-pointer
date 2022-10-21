@@ -1,13 +1,15 @@
-import { useEffect, useRef, useState } from "react"
-import ApartmentCard from "./ApartmentCard.tsx"
-import ApartmentPoint from "./ApartmentPoint.tsx"
+import React,{ useEffect, useRef, useState } from "react"
+import {ApartmentCard,ApartmentPoint} from "./index"
 
 type MapPointProps = {
   image: string
-  address: string
-  host: string
-  date: string
-  cost_per_night: number
+    imageTwo:string
+    imageThree:string
+    address: string
+    host: string
+    date: string
+    rating: number
+    cost_per_night: number
   
 }
 
@@ -35,6 +37,8 @@ const MapPoint = (props: MapPointProps) => {
     {opened ?
       <ApartmentCard
         image={props.image}
+        imageTwo={props.imageTwo}
+        imageThree={props.imageThree}
         address={props.address}
         host={props.host}
         date={props.date}

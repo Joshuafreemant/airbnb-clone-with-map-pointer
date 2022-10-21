@@ -6,6 +6,8 @@ import NoResult from './NoResult'
 import Map from './Map.tsx'
 import MapPoint from './MapPoint.tsx'
 import OverlayContainer from './OverlayContainer.tsx'
+import ApartmentCard from './ApartmentCard.tsx'
+import ApartmentPoint from './ApartmentPoint.tsx'
 
 
 export {
@@ -15,6 +17,8 @@ export {
     ListingCard,
     NoResult,
     Map,
-MapPoint,
-    OverlayContainer
+    MapPoint,
+    OverlayContainer,
+    ApartmentCard,
+    ApartmentPoint
 }

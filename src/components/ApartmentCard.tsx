@@ -41,6 +41,8 @@ const useStyles = makeStyles({
 
 type ApartmentCardProps = {
     image: string
+    imageTwo:string
+    imageThree:string
     address: string
     host: string
     date: string
@@ -59,10 +61,10 @@ export default function ApartmentCard(props: ApartmentCardProps) {
                         <img src={props.image} alt="" className='object-cover rounded-t-2xl w-[310px] h-[200px]' />
                     </div>
                     <div>
-                        <img src={props.image} alt="" className='object-cover rounded-t-2xl w-[310px] h-[200px]' />
+                        <img src={props.imageTwo} alt="" className='object-cover rounded-t-2xl w-[310px] h-[200px]' />
                     </div>
                     <div>
-                        <img src={props.image} alt="" className='object-cover rounded-t-2xl w-[310px] h-[200px]' />
+                        <img src={props.imageThree} alt="" className='object-cover rounded-t-2xl w-[310px] h-[200px]' />
                     </div>
                 </Carousel>
             </div>

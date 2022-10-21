@@ -531,7 +531,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
             </nav>
             <nav className='hidden z-20 bg-white fixed top-0 w-full md:flex justify-between items-center  px-8 py-5'>
                 <img src={logo} alt="" className='w-[150px]' />
-                <div className="drop-shadow-md w-[360px] ml-32 border-2 border-gray-300 rounded-[200px] px-4 py-[8px] flex justify-between items-center">
+                <div className="drop-shadow-md w-[360px] ml-32 border-2 border-gray-200 rounded-[200px] px-4 py-[8px] flex justify-between items-center">
                     <button className='border-r border-gray-300 pr-4 text-black text-[15px]'>Anywhere</button>
                     <button className='border-r border-gray-300 px-4 text-black text-[15px]'>Any week</button>
                     <div className="flex pl-3 gap-2">

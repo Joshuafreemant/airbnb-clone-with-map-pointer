@@ -1,3 +1,4 @@
+import React from 'react'
 import { makeStyles } from "@material-ui/styles"
 
 type ApartmentPonitProps = {
@@ -8,10 +9,10 @@ type ApartmentPonitProps = {
 const styles = makeStyles({
   root:{
     background: 'white',
-    borderRadius: '12px',
+    borderRadius: '50px',
     padding: '8px',
-    width: '60px',
-    fontWeight:'bold',
+    width: '40px',
+    fontWeight:600,
     zIndex: 1000,
     position: 'relative'
   }
@@ -21,7 +22,7 @@ const ApartmentPoint = (props: ApartmentPonitProps) => {
   const classes = styles()
   return (
     <div className={classes.root} onClick={props.onClick}>
-      {props.cost_per_night} $
+      ${props.cost_per_night} 
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import React from 'react'
 import { makeStyles } from "@material-ui/core";
 import { useEffect, useRef, useState } from "react";
 import data from "../data.json";
@@ -46,6 +47,8 @@ function Map({ center, zoom }: MapProps) {
       >
         <MapPoint
           image={apartment.img_url}
+          imageTwo={apartment.img_url_two}
+          imageThree={apartment.img_url_three}
           address={apartment.location}
           host={apartment.host}
           date={apartment.date}
