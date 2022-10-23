@@ -565,7 +565,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
 
                     {scrollX !== 0 && (
                         <button
-                            className="drop-shadow-2xl  mt-2 flex justify-center items-center  p-1 border border-gray-600 rounded-full h-[30px] w-[30px]"
+                            className="hidden drop-shadow-2xl  mt-2 md:flex justify-center items-center  p-1 border border-gray-600 rounded-full h-[30px] w-[30px]"
                             onClick={() => slide(-700)}
                         >
 
@@ -670,7 +670,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
                     </div>
                     {!scrolEnd && (
                         <button
-                            className="drop-shadow-2xl  mt-2 flex justify-center items-center  p-1 border border-gray-600 rounded-full h-[30px] w-[30px]"
+                            className="hidden drop-shadow-2xl  mt-2 md:flex justify-center items-center  p-1 border border-gray-600 rounded-full h-[30px] w-[30px]"
                             onClick={() => slide(+700)}
                         >
 
@@ -680,7 +680,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
                     )}
 
 
-                    <div className="flex border border-gray-300 rounded-xl items-center gap-2 p-3 ">
+                    <div className="hidden md:flex border border-gray-300 rounded-xl items-center gap-2 p-3 ">
                         <BsFilter className='text-[15px]' />
 
                         <p className='text-sm font-semibold'>Filters</p>
