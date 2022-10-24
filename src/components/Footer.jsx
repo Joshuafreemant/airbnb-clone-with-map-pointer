@@ -12,7 +12,7 @@ const Footer = () => {
   }
   return (
     <>
-      <nav className='bg-white fixed bottom-0 border-t border-gray-300 px-12 py-5 w-full'>
+      <nav className='z-50 bg-white fixed bottom-0 border-t border-gray-300 px-12 py-5 w-full'>
         <div className="hidden md:flex justify-between">
           <ul className='flex items-center gap-4'>
             <li>© 2022 Airbnb, Inc.</li>

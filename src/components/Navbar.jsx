@@ -561,7 +561,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
                 </div>
             </nav>
 
-            <nav className='z-20 bg-white fixed md:top-[90px] top-[75px] flex md:border-t border-gray-300 px-8 py-4 w-full'>
+            <nav className='z-50 bg-white fixed md:top-[90px] top-[75px] flex md:border-t border-gray-300 px-8 py-4 w-full'>
 
                 <div className='flex items-center gap-6 Navbar'>
 

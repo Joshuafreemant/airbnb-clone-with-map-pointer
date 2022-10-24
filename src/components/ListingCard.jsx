@@ -49,10 +49,10 @@ const ListingCard = ({ data }) => {
         <div className='flex flex-col gap-1'>
             <div className="relative">
                 {(allLike.includes(data.id)) ?
-                    <button className='absolute right-6 top-4 text-white z-50  text-xl' onClick={handleUnlike}>
+                    <button className='absolute right-6 top-4 text-white z-40  text-xl' onClick={handleUnlike}>
                         <FaHeart />
                     </button>
-                    : <button className='absolute right-6 top-4 text-white z-50 text-xl ' onClick={handleLike}>
+                    : <button className='absolute right-6 top-4 text-white z-40 text-xl ' onClick={handleLike}>
                         <FaRegHeart />
                     </button>
 

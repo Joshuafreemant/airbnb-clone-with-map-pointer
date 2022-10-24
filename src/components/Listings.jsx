@@ -4,7 +4,6 @@ import { ListingCard, NoResult } from './index';
 
 const Listings = ({ data, filterData, click }) => {
 
-    console.log('lllllll', filterData)
     return (
         <div className='px-12 grid md:grid-cols-3 lg:grid-cols-4 grid-cols-1 gap-8 mt-[190px] pb-28'>
             {
