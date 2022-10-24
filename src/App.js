@@ -51,7 +51,7 @@ function App() {
       }
 
 
-      <button onClick={handleMap} className='bg-[#222222] rounded-3xl px-5 py-3 text-white fixed bottom-20 show-btn left-[610px] flex items-center gap-2 '>
+      <button onClick={handleMap} className='z-50 bg-[#222222] rounded-3xl px-5 py-3 text-white fixed bottom-20 show-btn left-[610px] flex items-center gap-2 '>
         {!showMap ? <>Show Map <BsMapFill className='text-white' /></> : <> Show List <BsListUl className='text-white text-xl' /></>}
       </button>
 
