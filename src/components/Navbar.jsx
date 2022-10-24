@@ -499,17 +499,17 @@ const Navbar = ({ data, setFilterData, setClick }) => {
 
     return (
         <>
-            <nav className='md:hidden z-20 bg-white fixed top-0 w-full flex justify-center items-center  py-3'>
+            <nav className='md:hidden z-20 bg-white fixed top-0 w-full flex justify-center px-2 items-center  py-3'>
 
-                <div className="drop-shadow-xl  border-2 border-gray-200 rounded-[200px] gap-12  px-4 py-2 flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                        <button className=' p-2 text-lg font-medium text-black rounded-full'>
+                <div className="drop-shadow-xl  border-2 border-gray-200 rounded-[200px] w-full   px-3 py-2 flex justify-between items-center">
+                    <div className="w-11/12 flex items-center gap-2">
+                        <button className='w-2/12 text-lg font-medium text-black rounded-full'>
                             <FaSearch />
                         </button >
 
-                        <div className="flex flex-col">
-                            <h4 className='font-semibold'>Where to?</h4>
-                            <div className="flex justify-between gap-4">
+                        <div className="w-8/12 flex flex-col">
+                            <h4 className='w-full font-semibold'>Where to?</h4>
+                            <div className="w-full flex text-xs justify-between">
                                 <button className='text-xs'>Anywhere -</button>
                                 <button className='text-xs'>Any week -</button>
                                 <button className='text-xs'>Add guests</button>
@@ -519,9 +519,9 @@ const Navbar = ({ data, setFilterData, setClick }) => {
 
 
 
-                    <div className="">
-                        <button className=' p-2 text-lg font-medium text-black rounded-full'>
-                            <FaSearch />
+                    <div className="w-1/12">
+                        <button className=' text-lg font-medium text-black rounded-full'>
+                            <BsFilter />
                         </button >
                     </div>
 
@@ -529,6 +529,8 @@ const Navbar = ({ data, setFilterData, setClick }) => {
                 </div>
 
             </nav>
+
+
             <nav className='hidden z-20 bg-white fixed top-0 w-full md:flex justify-between items-center  px-8 py-5'>
                 <img src={logo} alt="" className='w-[150px]' />
                 <div className="drop-shadow-md w-[360px] ml-32 border-2 border-gray-200 rounded-[200px] px-4 py-[8px] flex justify-between items-center">

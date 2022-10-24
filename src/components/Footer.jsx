@@ -37,7 +37,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex md:hidden px-12 w-full justify-around">
+        <div className="flex md:hidden px-8 w-full justify-around">
           <div className="flex flex-col items-center justify-center">
             <button className='text-red-400 p-2 text-2xl rounded-full'>
               <FaSearch />
@@ -50,7 +50,7 @@ const Footer = () => {
             <FaRegHeart />
 
             </button >
-            <p className='text-sm'>WishList</p>
+            <p className='text-sm'>Wishlists</p>
           </div>
 
           <div className="flex flex-col items-center justify-center">
