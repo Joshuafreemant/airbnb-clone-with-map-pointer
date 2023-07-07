@@ -79,30 +79,12 @@ const Navbar = ({ data, setFilterData, setClick }) => {
 
 
     const sharedHomeFilter = () => {
-        let sharedHomeData = data.filter((data) => {
-            return data.category === 'shared_homes'
+        let sharedHomeData = data?.filter((data) => {
+            return data?.category === 'shared_homes'
         })
         setFilterData(sharedHomeData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: true,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
-        }))
-
+        setActive({ active, shared: true })
     }
 
     const omgFilter = () => {
@@ -111,28 +93,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(omgData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: true,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
-
-        }))
-
-
-
+        setActive({ active, omg: true })
     }
 
     const beachFilter = () => {
@@ -141,28 +102,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(beachData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: true,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
-
-        }))
-
-
-
+        setActive({ active, beach: true })
     }
 
     const islandFilter = () => {
@@ -171,24 +111,8 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(islandData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: true,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
-        }))
+        setActive({ active, island: true })
+
 
     }
     const beachFrontFilter = () => {
@@ -197,24 +121,8 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(beachfrontData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: true,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
-        }))
+        setActive({ active, beachfront: true })
+
 
     }
 
@@ -224,25 +132,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(iconicData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: true,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
-        }))
-
+        setActive({ active, iconic: true })
     }
 
     const designFilter = () => {
@@ -251,24 +141,8 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(designData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: true,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
-        }))
+        setActive({ active, design: true })
+
     }
 
     const mansionsFilter = () => {
@@ -277,25 +151,8 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(mansionData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: true,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
+        setActive({ active, mansion: true })
 
-        }))
     }
 
     const cavesFilter = () => {
@@ -304,24 +161,8 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(caveData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: true,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
-        }))
+        setActive({ active, cave: true })
+
     }
 
 
@@ -331,24 +172,8 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(bedData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: true,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
-        }))
+        setActive({ active, bed: true })
+
     }
     const tropicalFilter = () => {
         let tropicalData = data.filter((data) => {
@@ -356,25 +181,8 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(tropicalData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: true,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: false,
+        setActive({ active, tropical: true })
 
-        }))
     }
 
     const amazingPoolFilter = () => {
@@ -383,25 +191,9 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(amazingData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: true,
-            national: false,
-            cabin: false,
-            farm: false,
+        setActive({ active, amazing: true })
 
-        }))
+
     }
 
     const nationalFilter = () => {
@@ -410,25 +202,9 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(nationalData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: true,
-            cabin: false,
-            farm: false,
+        setActive({ active, national: true })
 
-        }))
+
     }
 
     const cabinFilter = () => {
@@ -437,25 +213,9 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(cabinData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: true,
-            farm: false,
 
-        }))
+        setActive({ active, cabin: true })
+
     }
 
     const farmFilter = () => {
@@ -464,35 +224,19 @@ const Navbar = ({ data, setFilterData, setClick }) => {
         })
         setFilterData(farmData)
         setClick(true)
-        setActive((prev) => ({
-            ...prev,
-            beach: false,
-            omg: false,
-            shared: false,
-            beachfront: false,
-            island: false,
-            iconic: false,
-            design: false,
-            mansion: false,
-            cave: false,
-            bed: false,
-            tropical: false,
-            amazing: false,
-            national: false,
-            cabin: false,
-            farm: true,
+        setActive({ active, farm: true })
 
-        }))
+
     }
 
 
 
 
 
-    const activeStyle = 'border-b-black border-b-4 text-xs font-semibold';
+    const activeStyle = 'cursor-pointer border-b-black flex gap-2 items-center flex-col border-b-2  text-xs font-semibold ';
 
     const inactiveStyle =
-        'before:border-b-transparent text-xs font-semibold';
+        'cursor-pointer  flex items-center flex-col hover:border-b-gray-300 border-b-transparent gap-2 border-b-2  text-xs font-semibold ';
 
 
 
@@ -531,9 +275,9 @@ const Navbar = ({ data, setFilterData, setClick }) => {
             </nav>
 
 
-            <nav className='hidden z-20 bg-white fixed top-0 w-full md:flex justify-between items-center  px-8 py-5'>
-                <img src={logo} alt="" className='w-[150px]' />
-                <div className="drop-shadow-md w-[360px] ml-32 border-2 border-gray-200 rounded-[200px] px-4 py-[8px] flex justify-between items-center">
+            <nav className='hidden z-20 bg-white fixed top-0 w-full md:flex justify-between items-center  px-8 py-4 border-b border-gray-200'>
+                <img src={logo} alt="" className='lg:w-[140px] md:w-[70px]' />
+                <div className="drop-shadow-sm   border-[2px] border-gray-100 rounded-[200px] px-4 py-[7px] flex justify-between items-center">
                     <button className='border-r border-gray-300 pr-4 text-black text-[15px]'>Anywhere</button>
                     <button className='border-r border-gray-300 px-4 text-black text-[15px]'>Any week</button>
                     <div className="flex pl-3 gap-2">
@@ -548,9 +292,9 @@ const Navbar = ({ data, setFilterData, setClick }) => {
                 <div className="flex items-center justify-between gap-4 ">
                     <button className='font-semibold'>Become a Host</button>
                     <button>
-                     <TbWorld className='text-xl'/>   
+                        <TbWorld className='text-xl' />
                     </button>
-                    <div className="border border-gray-300 rounded-[50px] w-[95px] gap-4  px-4 py-2 flex justify-between items-center">
+                    <div className="border border-gray-300 rounded-[50px]  gap-4  px-3 py-[7px] flex justify-between items-center">
                         <GiHamburgerMenu className='w-[20px] h-[20px] text-gray-500' />
                         <div className="relative">
                             <FaUserCircle className='w-[30px] h-[30px] text-gray-500' />
@@ -561,7 +305,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
                 </div>
             </nav>
 
-            <nav className='z-50 bg-white fixed md:top-[90px] top-[75px] flex md:border-t border-gray-300 px-8 py-4 w-full'>
+            <nav className='z-50 bg-white fixed md:top-[81px] top-0 flex  px-8 py-4 w-full'>
 
                 <div className='flex items-center gap-6 Navbar'>
 
@@ -576,99 +320,99 @@ const Navbar = ({ data, setFilterData, setClick }) => {
                     )}
 
 
-                    <div ref={scrl} onScroll={scrollCheck} className="ul px-5 flex gap-[20px]">
+                    <div ref={scrl} onScroll={scrollCheck} className="ul px-5 flex gap-[20px] ">
 
 
 
-                        <div className="flex flex-col items-center gap-2 cursor-pointer" onClick={sharedHomeFilter}>
-                            <img src={sharedHomes} alt="" className='w-[25px]' />
-                            <p className={active.shared === true ? activeStyle : inactiveStyle}>Shared Homes</p>
+                        <div  className={active.shared === true ? activeStyle : inactiveStyle} onClick={sharedHomeFilter}>
+                            <img src={sharedHomes} alt="" className={`w-[25px] ${!active.shared ? 'opacity-60' : 'opacity-100'}`} />
+                            <p  className={`text-xs font-normal ${!active.shared ? 'opacity-60' : 'opacity-100'}`}>Shared Homes</p>
                         </div>
 
-                        <div className="flex flex-col items-center gap-2 cursor-pointer" onClick={omgFilter}>
-                            <img src={OMG} alt="" className='w-[25px]' />
-                            <p className={active.omg === true ? activeStyle : inactiveStyle}>OMG!</p>
+                        <div  className={active.omg === true ? activeStyle : inactiveStyle} onClick={omgFilter}>
+                            <img src={OMG} alt="" className={`w-[25px] ${!active.omg ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.omg ? 'opacity-60' : 'opacity-100'}`}>OMG!</p>
                         </div>
 
-                        <div className="flex flex-col items-center gap-2 cursor-pointer" onClick={beachFilter}>
-                            <img src={beach} alt="" className='w-[25px]' />
-                            <p className={active.beach === true ? activeStyle : inactiveStyle}>Beach</p>
+                         <div  className={active.beach === true ? activeStyle : inactiveStyle} onClick={beachFilter}>
+                            <img src={beach} alt="" className={`w-[25px] ${!active.beach ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.beach ? 'opacity-60' : 'opacity-100'}`}>Beach</p>
                         </div>
 
 
-                        <div className="flex flex-col items-center gap-2 cursor-pointer" onClick={islandFilter}>
-                            <img src={islands} alt="" className='w-[25px]' />
+                        <div  className={active.island === true ? activeStyle : inactiveStyle} onClick={islandFilter}>
+                            <img src={islands} alt="" className={`w-[25px] ${!active.island ? 'opacity-60' : 'opacity-100'}`} />
 
-                            <p className={active.island === true ? activeStyle : inactiveStyle}>Islands</p>
-
-                        </div>
-
-                        <div className="flex flex-col items-center gap-2" onClick={beachFrontFilter}>
-                            <img src={beachfront} alt="" className='w-[25px]' />
-
-                            <p className={active.beachfront === true ? activeStyle : inactiveStyle}>Beachfront</p>
+                            <p className={`text-xs font-normal ${!active.island ? 'opacity-60' : 'opacity-100'}`}>Islands</p>
 
                         </div>
 
-                        <div className="flex flex-col items-center gap-2" onClick={iconicFilter}>
-                            <img src={Iconic} alt="" className='w-[25px]' />
-                            <p className={active.iconic === true ? activeStyle : inactiveStyle}>Iconic cities</p>
+                        <div  className={active.beachfront === true ? activeStyle : inactiveStyle} onClick={beachFrontFilter}>
+                            <img src={beachfront} alt="" className={`w-[25px] ${!active.beachfront ? 'opacity-60' : 'opacity-100'}`} />
+
+                            <p className={`text-xs font-normal ${!active.beachfront ? 'opacity-60' : 'opacity-100'}`}>Beachfront</p>
 
                         </div>
 
-                        <div className="flex flex-col items-center gap-2" onClick={designFilter}>
-                            <img src={Design} alt="" className='w-[25px]' />
-                            <p className={active.design === true ? activeStyle : inactiveStyle}>Design</p>
+                        <div  className={active.iconic === true ? activeStyle : inactiveStyle} onClick={iconicFilter}>
+                            <img src={Iconic} alt="" className={`w-[25px] ${!active.iconic ? 'opacity-60' : 'opacity-100'}`} />
+                            <p  className={`text-xs font-normal ${!active.iconic ? 'opacity-60' : 'opacity-100'}`}>Iconic cities</p>
 
                         </div>
 
-                        <div className="flex flex-col items-center gap-2" onClick={mansionsFilter}>
-                            <img src={mansions} alt="" className='w-[25px]' />
-                            <p className={active.mansion === true ? activeStyle : inactiveStyle}>Mansions</p>
-
-                        </div>
-                        <div className="flex flex-col items-center gap-2" onClick={cavesFilter}>
-                            <img src={caves} alt="" className='w-[25px]' />
-                            <p className={active.cave === true ? activeStyle : inactiveStyle}>Caves</p>
+                        <div  className={active.design === true ? activeStyle : inactiveStyle} onClick={designFilter}>
+                            <img src={Design} alt="" className={`w-[25px] ${!active.design ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.design ? 'opacity-60' : 'opacity-100'}`}>Design</p>
 
                         </div>
 
-                        <div className="flex flex-col items-center gap-2" onClick={bedFilter}>
-                            <img src={bed} alt="" className='w-[25px]' />
-                            <p className={active.bed === true ? activeStyle : inactiveStyle}>Bed & breakfasts</p>
+                        <div  className={active.mansion === true ? activeStyle : inactiveStyle} onClick={mansionsFilter}>
+                            <img src={mansions} alt="" className={`w-[25px] ${!active.mansion ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.mansion ? 'opacity-60' : 'opacity-100'}`}>Mansions</p>
+
+                        </div>
+                        <div  className={active.cave === true ? activeStyle : inactiveStyle} onClick={cavesFilter}>
+                            <img src={caves} alt="" className={`w-[25px] ${!active.cave ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.cave ? 'opacity-60' : 'opacity-100'}`}>Caves</p>
+
+                        </div>
+
+                        <div  className={active.bed === true ? activeStyle : inactiveStyle} onClick={bedFilter}>
+                            <img src={bed} alt="" className={`w-[25px] ${!active.bed ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.bed ? 'opacity-60' : 'opacity-100'}`}>Bed & breakfasts</p>
 
 
                         </div>
 
-                        <div className="flex flex-col items-center gap-2" onClick={tropicalFilter}>
-                            <img src={tropical} alt="" className='w-[25px]' />
-                            <p className={active.tropical === true ? activeStyle : inactiveStyle}>Tropical</p>
+                        <div  className={active.tropical === true ? activeStyle : inactiveStyle} onClick={tropicalFilter}>
+                            <img src={tropical} alt="" className={`w-[25px] ${!active.tropical ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.tropical ? 'opacity-60' : 'opacity-100'}`}>Tropical</p>
 
                         </div>
 
-                        <div className="flex flex-col items-center gap-2" onClick={amazingPoolFilter}>
-                            <img src={amazing} alt="" className='w-[25px]' />
-                            <p className={active.amazing === true ? activeStyle : inactiveStyle}>Amazing Pool</p>
+                        <div  className={active.amazing === true ? activeStyle : inactiveStyle} onClick={amazingPoolFilter}>
+                            <img src={amazing} alt="" className={`w-[25px] ${!active.amazing ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.amazing ? 'opacity-60' : 'opacity-100'}`}>Amazing Pool</p>
 
                         </div>
 
-                        <div className="flex flex-col items-center gap-2" onClick={nationalFilter}>
-                            <img src={national} alt="" className='w-[25px]' />
-                            <p className={active.national === true ? activeStyle : inactiveStyle}>National Parks</p>
+                        <div  className={active.national === true ? activeStyle : inactiveStyle} onClick={nationalFilter}>
+                            <img src={national} alt="" className={`w-[25px] ${!active.national ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.national ? 'opacity-60' : 'opacity-100'}`}>National Parks</p>
 
                         </div>
 
-                        <div className="flex flex-col items-center gap-2" onClick={cabinFilter}>
-                            <img src={cabin} alt="" className='w-[25px]' />
-                            <p className={active.cabin === true ? activeStyle : inactiveStyle}>Cabins</p>
+                        <div  className={active.cabin === true ? activeStyle : inactiveStyle} onClick={cabinFilter}>
+                            <img src={cabin} alt="" className={`w-[25px] ${!active.cabin ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.cabin ? 'opacity-60' : 'opacity-100'}`}>Cabins</p>
 
                         </div>
 
-                        <div className="flex flex-col items-center gap-2" onClick={farmFilter}>
-                            <img src={farm} alt="" className='w-[25px]' />
-                            <p className={active.farm === true ? activeStyle : inactiveStyle}>Farms</p>
+                        <div  className={active.farm === true ? activeStyle : inactiveStyle} onClick={farmFilter}>
+                            <img src={farm} alt="" className={`w-[25px] ${!active.farm ? 'opacity-60' : 'opacity-100'}`} />
+                            <p className={`text-xs font-normal ${!active.farm ? 'opacity-60' : 'opacity-100'}`}>Farms</p>
 
-                        </div>
+                        </div> 
                     </div>
                     {!scrolEnd && (
                         <button

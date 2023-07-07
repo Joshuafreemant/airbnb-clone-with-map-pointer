@@ -61,13 +61,13 @@ const ListingCard = ({ data }) => {
 
                 <Carousel showThumbs={false} showStatus={false}>
                     <div className='relative'>
-                        <img src={data.img_url} alt="" className='object-cover rounded-2xl w-[300px] h-[280px]' />
+                        <img src={data?.img_url} alt="" className='object-cover rounded-2xl w-[300px] h-[280px]' />
                     </div>
                     <div>
-                        <img src={data.img_url_two} alt="" className='object-cover rounded-xl w-[300px] h-[280px]' />
+                        <img src={data?.img_url_two} alt="" className='object-cover rounded-xl w-[300px] h-[280px]' />
                     </div>
                     <div>
-                        <img src={data.img_url_three} alt="" className='object-cover rounded-xl w-[300px] h-[280px]' />
+                        <img src={data?.img_url_three} alt="" className='object-cover rounded-xl w-[300px] h-[280px]' />
                     </div>
                 </Carousel>
             </div>

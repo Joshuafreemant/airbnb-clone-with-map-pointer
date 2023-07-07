@@ -44,16 +44,18 @@ function App() {
           </Wrapper>
         </div> :
         <>
-        <Listings data={data} filterData={filterData} click={click} />
-        <Footer />
+          <Listings data={data} filterData={filterData} click={click} />
+          <Footer />
         </>
 
       }
 
+      <div className='flex items-center justify-center'>
+        <button onClick={handleMap} className='z-50 bg-[#222222] rounded-3xl px-5 py-3 text-white fixed bottom-20 show-btn  flex items-center gap-2 '>
+          {!showMap ? <>Show Map <BsMapFill className='text-white' /></> : <> Show List <BsListUl className='text-white text-xl' /></>}
+        </button>
+      </div>
 
-      <button onClick={handleMap} className='z-50 bg-[#222222] rounded-3xl px-5 py-3 text-white fixed bottom-20 show-btn left-[610px] flex items-center gap-2 '>
-        {!showMap ? <>Show Map <BsMapFill className='text-white' /></> : <> Show List <BsListUl className='text-white text-xl' /></>}
-      </button>
 
     </div>
   );

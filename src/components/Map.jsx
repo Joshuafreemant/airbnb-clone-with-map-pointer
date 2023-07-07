@@ -1,22 +1,12 @@
 import React from 'react'
-import { makeStyles } from "@material-ui/core";
 import { useEffect, useRef, useState } from "react";
 import data from "../data.json";
 import { MapPoint, OverlayContainer } from "./index";
 
 
-
-const useStyles = makeStyles({
-  map: {
-    height: '100vh'
-  }
-})
-
-
 function Map({ center, zoom }) {
     const ref = useRef(null)
     const [map, setMap] = useState(null)
-    const classes = useStyles()
   
     useEffect(() => {
       if (ref.current) {
@@ -31,7 +21,7 @@ function Map({ center, zoom }) {
     }, [center, zoom])
   
     return (
-      <div ref={ref} id="map" className={classes.map}>
+      <div ref={ref} id="map" className='h-screen'>
         {data.map((apartment, index) => (
           <OverlayContainer
             map={map}
