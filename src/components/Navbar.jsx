@@ -243,7 +243,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
 
     return (
         <>
-            <nav className='md:hidden z-20 bg-white fixed top-0 w-full flex justify-center px-2 items-center  py-3'>
+            <nav className='sm:hidden z-30 bg-white fixed top-0 w-full flex justify-center px-2 items-center  py-3'>
 
                 <div className="drop-shadow-xl  border-2 border-gray-200 rounded-[200px] w-full   px-3 py-2 flex justify-between items-center">
                     <div className="w-11/12 flex items-center gap-2">
@@ -305,7 +305,7 @@ const Navbar = ({ data, setFilterData, setClick }) => {
                 </div>
             </nav>
 
-            <nav className='z-50 bg-white fixed md:top-[81px] top-0 flex  px-8 py-4 w-full'>
+            <nav className='z-50 bg-white fixed top-[78px] md:top-[81px] flex  px-8 py-0 sm:py-4 w-full'>
 
                 <div className='flex items-center gap-6 Navbar'>
 

@@ -5,7 +5,7 @@ import { ListingCard, NoResult } from './index';
 const Listings = ({ data, filterData, click }) => {
 
     return (
-        <div className='px-12 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-8 mt-[200px] pb-28'>
+        <div className='px-12 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-8 mt-[200px] md:mt-[200px] pb-28'>
             {
                 click === true ?
                     (
